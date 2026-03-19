@@ -1,0 +1,80 @@
+---
+name: "Follower script"
+category: "example"
+type: "example"
+language: "LSL"
+description: "This script is based on an extract from the Batman Follower v1.2. It is very basic. If you put it in an object, that object will keep moving toward a position offset from it's owner."
+wiki_url: "https://wiki.secondlife.com/wiki/Follower_script"
+author: ""
+first_fetched: "2026-03-18"
+last_updated: "2026-03-18"
+has_versions: "true"
+active_version: "scraped-sl-wiki-2026-03-18"
+---
+
+This script is based on an extract from the Batman Follower v1.2.  It is very basic.  If you put it in an object, that object will keep moving toward a position *offset* from it's owner.
+
+```lsl
+vector offset = < -1, 0, 1>;  //1 meter behind and 1 meter above owner's center.
+
+default
+{
+    state_entry()
+    {
+        llSetStatus(STATUS_PHYSICS, TRUE);
+        // Little pause to allow server to make potentially large linked object physical.
+        llSleep(0.1);
+        // Look for owner within 20 metres in 360 degree arc every 1 seconds.
+        llSensorRepeat("", llGetOwner(), AGENT, 20.0, PI,1.0);
+    }
+    sensor(integer total_number)
+    {   // Owner detected...
+        // Get position and rotation
+        vector pos   = llDetectedPos(0);
+        rotation rot = llDetectedRot(0);
+        // Offset back one metre in X and up one metre in Z based on world coordinates.
+        // use whatever offset you want.
+        vector worldOffset = offset;
+        // Offset relative to owner needs a quaternion.
+        vector avOffset = offset * rot;
+
+        pos += avOffset;       // use the one you want, world or relative to AV.
+
+        llMoveToTarget(pos,0.4);
+    }
+}
+```
+
+```lsl
+//adding this script as a less laggy and more efficient way of doing the same as above
+//this is for havok4's new functions
+vector offset = < -1, 0, 1>;  //1 meter behind and 1 meter above owner's center.
+
+default
+{
+    state_entry()
+    {
+        llSetStatus(STATUS_PHYSICS, TRUE);
+        // Little pause to allow server to make potentially large linked object physical.
+        llSleep(0.1);
+        llSetTimerEvent(1.0);
+    }
+    timer()
+    {
+        list det = llGetObjectDetails(llGetOwner(),[OBJECT_POS,OBJECT_ROT]);//this will never fail less owner is not in the same sim
+        // Owner detected...
+        // Get position and rotation
+        vector pos   = llList2Vector(det,0);
+        rotation rot = (rotation)llList2String(det,1);
+        // Offset back one metre in X and up one metre in Z based on world coordinates.
+        // use whatever offset you want.
+        vector worldOffset = offset;
+        // Offset relative to owner needs a quaternion.
+        vector avOffset = offset * rot;
+
+        pos += avOffset;       // use the one you want, world or relative to AV.
+
+        llMoveToTarget(pos,0.4);
+    }
+}
+```

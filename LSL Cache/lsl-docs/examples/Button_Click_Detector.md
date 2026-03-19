@@ -1,0 +1,60 @@
+---
+name: "Button Click Detector"
+category: "example"
+type: "example"
+language: "LSL"
+description: "integer horizontal = 4; integer vertical = 3; list buttons = [ \"brown\", \"red\", \"orange\", \"yellow\", \"blue\", \"cyan\", \"lblue\", \"gray\", \"green\", \"puke\", \"purple\", \"pink\" ];"
+wiki_url: "https://wiki.secondlife.com/wiki/Button_Click_Detector"
+author: ""
+first_fetched: "2026-03-18"
+last_updated: "2026-03-18"
+has_versions: "true"
+active_version: "scraped-sl-wiki-2026-03-18"
+---
+
+```lsl
+// This script assumes a grid of 4 columns, 3 rows of buttons as listed in the 'buttons' list below.
+// But you can change it as you like, just change horizontal to the # of columns and vertical to the # of rows,
+// and of course the buttons list must be updated as well. Other than that the code (and more importantly, the MATH)
+// should not need updating.
+
+integer horizontal = 4;
+integer vertical = 3;
+list buttons = [ "brown", "red", "orange", "yellow",
+"blue", "cyan", "lblue", "gray",
+"green", "puke", "purple", "pink" ];
+
+default
+{
+    touch_start(integer total_number)
+    {
+        vector v = llDetectedTouchUV(0);
+
+        if( v == TOUCH_INVALID_TEXCOORD ) {
+            llSay(0, "I don't know what you just did.");
+            return;
+        }
+
+        float x = v.x;
+        float y = 1.0-v.y;
+
+        integer idx;
+        integer rowno;
+        integer colno;
+
+        rowno = (integer)(y / (1.0/(float)vertical));
+        colno = (integer)(x / (1.0/(float)horizontal));
+
+        idx = rowno*horizontal + colno;
+
+        if( idx > llGetListLength(buttons) ) {
+            llSay(0, "Great, you stumped me. Push off.");
+            return;
+        }
+
+        llSay(0, "Click at " + (string)x + ", " + (string)y);
+        llSay(0, "That is, row " + (string)rowno + ", col " + (string)colno);
+        llSay(0, "That is, you clicked near the " + llList2String(buttons,idx) + " button.");
+    }
+}
+```

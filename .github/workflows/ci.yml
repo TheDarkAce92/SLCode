@@ -1,0 +1,47 @@
+name: CI Validation
+
+on:
+  push:
+    branches:
+      - "**"
+    tags-ignore:
+      - "v*"
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip
+          if (Test-Path requirements.txt) {
+            python -m pip install -r requirements.txt
+          }
+
+      - name: Syntax check search-cache.py
+        shell: pwsh
+        run: |
+          python -c "import py_compile; py_compile.compile('search-cache.py', doraise=True); print('search-cache.py syntax OK')"
+
+      - name: CLI smoke checks
+        shell: pwsh
+        run: |
+          python search-cache.py --help
+          python search-cache.py status
+          python search-cache.py search llSay --cat functions --limit 3
+
+      - name: Validate build script syntax
+        shell: pwsh
+        run: |
+          python -c "import py_compile; py_compile.compile('build.py', doraise=True); print('build.py syntax OK')"

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLCode Icon Sheet Review</title>
+  <style>
+    :root {
+      --bg: #11151c;
+      --panel: #1a202b;
+      --border: #2c3442;
+      --text: #e6edf7;
+      --muted: #97a4b8;
+      --accent: #63a4ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Segoe UI, Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #18202b, #121720);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 20px;
+    }
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 16px;
+      padding: 20px;
+    }
+    .tile {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    }
+    .img-wrap {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(45deg, #141a23 25%, #1a2230 25%, #1a2230 50%, #141a23 50%, #141a23 75%, #1a2230 75%, #1a2230 100%);
+      background-size: 24px 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    img {
+      width: 128px;
+      height: 128px;
+      image-rendering: auto;
+    }
+    .name {
+      font-family: Consolas, 'Cascadia Code', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 4px;
+      word-break: break-all;
+    }
+    .meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SLCode Icon Review Sheet</h1>
+    <p>Pick the strongest app icon tile and tell me its filename, for example: icon_r3_c7.png</p>
+  </header>
+  <main class="grid">
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c1.png" alt="icon_r1_c1.png"></div><div class="name">icon_r1_c1.png</div><div class="meta">row 1, col 1</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c2.png" alt="icon_r1_c2.png"></div><div class="name">icon_r1_c2.png</div><div class="meta">row 1, col 2</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c3.png" alt="icon_r1_c3.png"></div><div class="name">icon_r1_c3.png</div><div class="meta">row 1, col 3</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c4.png" alt="icon_r1_c4.png"></div><div class="name">icon_r1_c4.png</div><div class="meta">row 1, col 4</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c5.png" alt="icon_r1_c5.png"></div><div class="name">icon_r1_c5.png</div><div class="meta">row 1, col 5</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c6.png" alt="icon_r1_c6.png"></div><div class="name">icon_r1_c6.png</div><div class="meta">row 1, col 6</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c7.png" alt="icon_r1_c7.png"></div><div class="name">icon_r1_c7.png</div><div class="meta">row 1, col 7</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c8.png" alt="icon_r1_c8.png"></div><div class="name">icon_r1_c8.png</div><div class="meta">row 1, col 8</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c9.png" alt="icon_r1_c9.png"></div><div class="name">icon_r1_c9.png</div><div class="meta">row 1, col 9</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c10.png" alt="icon_r1_c10.png"></div><div class="name">icon_r1_c10.png</div><div class="meta">row 1, col 10</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r1_c11.png" alt="icon_r1_c11.png"></div><div class="name">icon_r1_c11.png</div><div class="meta">row 1, col 11</div></div>
+
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c1.png" alt="icon_r2_c1.png"></div><div class="name">icon_r2_c1.png</div><div class="meta">row 2, col 1</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c2.png" alt="icon_r2_c2.png"></div><div class="name">icon_r2_c2.png</div><div class="meta">row 2, col 2</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c3.png" alt="icon_r2_c3.png"></div><div class="name">icon_r2_c3.png</div><div class="meta">row 2, col 3</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c4.png" alt="icon_r2_c4.png"></div><div class="name">icon_r2_c4.png</div><div class="meta">row 2, col 4</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c5.png" alt="icon_r2_c5.png"></div><div class="name">icon_r2_c5.png</div><div class="meta">row 2, col 5</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c6.png" alt="icon_r2_c6.png"></div><div class="name">icon_r2_c6.png</div><div class="meta">row 2, col 6</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c7.png" alt="icon_r2_c7.png"></div><div class="name">icon_r2_c7.png</div><div class="meta">row 2, col 7</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c8.png" alt="icon_r2_c8.png"></div><div class="name">icon_r2_c8.png</div><div class="meta">row 2, col 8</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c9.png" alt="icon_r2_c9.png"></div><div class="name">icon_r2_c9.png</div><div class="meta">row 2, col 9</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c10.png" alt="icon_r2_c10.png"></div><div class="name">icon_r2_c10.png</div><div class="meta">row 2, col 10</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r2_c11.png" alt="icon_r2_c11.png"></div><div class="name">icon_r2_c11.png</div><div class="meta">row 2, col 11</div></div>
+
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c1.png" alt="icon_r3_c1.png"></div><div class="name">icon_r3_c1.png</div><div class="meta">row 3, col 1</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c2.png" alt="icon_r3_c2.png"></div><div class="name">icon_r3_c2.png</div><div class="meta">row 3, col 2</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c3.png" alt="icon_r3_c3.png"></div><div class="name">icon_r3_c3.png</div><div class="meta">row 3, col 3</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c4.png" alt="icon_r3_c4.png"></div><div class="name">icon_r3_c4.png</div><div class="meta">row 3, col 4</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c5.png" alt="icon_r3_c5.png"></div><div class="name">icon_r3_c5.png</div><div class="meta">row 3, col 5</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c6.png" alt="icon_r3_c6.png"></div><div class="name">icon_r3_c6.png</div><div class="meta">row 3, col 6</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c7.png" alt="icon_r3_c7.png"></div><div class="name">icon_r3_c7.png</div><div class="meta">row 3, col 7</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c8.png" alt="icon_r3_c8.png"></div><div class="name">icon_r3_c8.png</div><div class="meta">row 3, col 8</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c9.png" alt="icon_r3_c9.png"></div><div class="name">icon_r3_c9.png</div><div class="meta">row 3, col 9</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c10.png" alt="icon_r3_c10.png"></div><div class="name">icon_r3_c10.png</div><div class="meta">row 3, col 10</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r3_c11.png" alt="icon_r3_c11.png"></div><div class="name">icon_r3_c11.png</div><div class="meta">row 3, col 11</div></div>
+
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c1.png" alt="icon_r4_c1.png"></div><div class="name">icon_r4_c1.png</div><div class="meta">row 4, col 1</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c2.png" alt="icon_r4_c2.png"></div><div class="name">icon_r4_c2.png</div><div class="meta">row 4, col 2</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c3.png" alt="icon_r4_c3.png"></div><div class="name">icon_r4_c3.png</div><div class="meta">row 4, col 3</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c4.png" alt="icon_r4_c4.png"></div><div class="name">icon_r4_c4.png</div><div class="meta">row 4, col 4</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c5.png" alt="icon_r4_c5.png"></div><div class="name">icon_r4_c5.png</div><div class="meta">row 4, col 5</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c6.png" alt="icon_r4_c6.png"></div><div class="name">icon_r4_c6.png</div><div class="meta">row 4, col 6</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c7.png" alt="icon_r4_c7.png"></div><div class="name">icon_r4_c7.png</div><div class="meta">row 4, col 7</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c8.png" alt="icon_r4_c8.png"></div><div class="name">icon_r4_c8.png</div><div class="meta">row 4, col 8</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c9.png" alt="icon_r4_c9.png"></div><div class="name">icon_r4_c9.png</div><div class="meta">row 4, col 9</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c10.png" alt="icon_r4_c10.png"></div><div class="name">icon_r4_c10.png</div><div class="meta">row 4, col 10</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r4_c11.png" alt="icon_r4_c11.png"></div><div class="name">icon_r4_c11.png</div><div class="meta">row 4, col 11</div></div>
+
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c1.png" alt="icon_r5_c1.png"></div><div class="name">icon_r5_c1.png</div><div class="meta">row 5, col 1</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c2.png" alt="icon_r5_c2.png"></div><div class="name">icon_r5_c2.png</div><div class="meta">row 5, col 2</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c3.png" alt="icon_r5_c3.png"></div><div class="name">icon_r5_c3.png</div><div class="meta">row 5, col 3</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c4.png" alt="icon_r5_c4.png"></div><div class="name">icon_r5_c4.png</div><div class="meta">row 5, col 4</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c5.png" alt="icon_r5_c5.png"></div><div class="name">icon_r5_c5.png</div><div class="meta">row 5, col 5</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c6.png" alt="icon_r5_c6.png"></div><div class="name">icon_r5_c6.png</div><div class="meta">row 5, col 6</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c7.png" alt="icon_r5_c7.png"></div><div class="name">icon_r5_c7.png</div><div class="meta">row 5, col 7</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c8.png" alt="icon_r5_c8.png"></div><div class="name">icon_r5_c8.png</div><div class="meta">row 5, col 8</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c9.png" alt="icon_r5_c9.png"></div><div class="name">icon_r5_c9.png</div><div class="meta">row 5, col 9</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c10.png" alt="icon_r5_c10.png"></div><div class="name">icon_r5_c10.png</div><div class="meta">row 5, col 10</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r5_c11.png" alt="icon_r5_c11.png"></div><div class="name">icon_r5_c11.png</div><div class="meta">row 5, col 11</div></div>
+
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c1.png" alt="icon_r6_c1.png"></div><div class="name">icon_r6_c1.png</div><div class="meta">row 6, col 1</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c2.png" alt="icon_r6_c2.png"></div><div class="name">icon_r6_c2.png</div><div class="meta">row 6, col 2</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c3.png" alt="icon_r6_c3.png"></div><div class="name">icon_r6_c3.png</div><div class="meta">row 6, col 3</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c4.png" alt="icon_r6_c4.png"></div><div class="name">icon_r6_c4.png</div><div class="meta">row 6, col 4</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c5.png" alt="icon_r6_c5.png"></div><div class="name">icon_r6_c5.png</div><div class="meta">row 6, col 5</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c6.png" alt="icon_r6_c6.png"></div><div class="name">icon_r6_c6.png</div><div class="meta">row 6, col 6</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c7.png" alt="icon_r6_c7.png"></div><div class="name">icon_r6_c7.png</div><div class="meta">row 6, col 7</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c8.png" alt="icon_r6_c8.png"></div><div class="name">icon_r6_c8.png</div><div class="meta">row 6, col 8</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c9.png" alt="icon_r6_c9.png"></div><div class="name">icon_r6_c9.png</div><div class="meta">row 6, col 9</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c10.png" alt="icon_r6_c10.png"></div><div class="name">icon_r6_c10.png</div><div class="meta">row 6, col 10</div></div>
+    <div class="tile"><div class="img-wrap"><img src="icon_r6_c11.png" alt="icon_r6_c11.png"></div><div class="name">icon_r6_c11.png</div><div class="meta">row 6, col 11</div></div>
+  </main>
+</body>
+</html>

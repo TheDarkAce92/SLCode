@@ -1,0 +1,33 @@
+---
+name: "llDetectedLinkNumber"
+category: function-usage
+tags: ["llDetectedLinkNumber"]
+functions_used: ["llDetectedLinkNumber"]
+sources: ["buildersbrewery/lsl.json"]
+memory_impact: unknown
+complexity: beginner
+extracted: "2026-03-09"
+last_reviewed: "2026-03-09"
+---
+
+# llDetectedLinkNumber
+
+Extracted from: buildersbrewery/lsl.json
+
+## Code
+
+```lsl
+llDetectedLinkNumber(${integer number})
+```
+
+## When to Use
+
+- _(Add usage notes here)_
+
+## Gotchas
+
+- _(Add caveats here)_
+
+## See Also
+
+- `/lsl-docs/patterns/README.md`

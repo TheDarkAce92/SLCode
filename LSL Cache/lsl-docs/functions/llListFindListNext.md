@@ -1,0 +1,128 @@
+---
+name: "llListFindListNext"
+category: "function"
+type: "function"
+language: "LSL"
+description: 'Returns the integer index of the nth instance of test in src.
+
+If test is not found in src, -1 is returned.
+The index of the first entry in the list is 0
+An expansion of llListFindList which adds an instance parameter to select the nth match to test parameter.
+llListFindListNext(src, test, 0); is fu'
+signature: "integer llListFindListNext(list src, list test, integer n)"
+return_type: "integer"
+sleep_time: ""
+energy_cost: "10.0"
+wiki_url: 'https://wiki.secondlife.com/wiki/llListFindListNext'
+deprecated: "false"
+first_fetched: "2026-03-10"
+last_updated: "2026-03-10"
+---
+
+Returns the integer index of the nth instance of test in src.
+
+If test is not found in src, -1 is returned.
+The index of the first entry in the list is 0
+An expansion of llListFindList which adds an instance parameter to select the nth match to test parameter.
+llListFindListNext(src, test, 0); is functionally equivalent to llListFindList(src, test);
+Given a list like [ 'Resident', 'Alexia', 'Resident', 'Bob', 'Resident', 'Steve', 'Resident', 'Evil' ] using a test of [ 'Resident' ] and an instance of 0, 1, 2, 3 would return indices of 0, 2, 4, and 6 respectively. Selecting the 4th or greater instance will not be found and will return -1.
+Reverse indexing is also supported. Using an instance of -1, -2, -3, -4 would respectively return 6, 4, 2, 0 And -5 and lower would again return -1
+If test is found at the last index in src the positive index is returned (5th entry of 5 returns 4).
+
+
+## Signature
+
+```lsl
+integer llListFindListNext(list src, list test, integer n);
+```
+
+
+## Parameters
+
+
+| Type | Name | Description |
+|------|------|-------------|
+| `list` | `src` | what to search in (haystack) |
+| `list` | `test` | what to search for (needles) |
+| `integer` | `instance` | which instance (needle) to return |
+
+
+## Return Value
+
+Returns `integer`.
+
+
+## Caveats
+
+- Energy cost: **10.0**.
+
+
+## See Also
+
+- [SL Wiki](https://wiki.secondlife.com/wiki/llListFindListNext)
+
+
+<!-- wiki-source -->
+_Source: [SL Wiki](https://wiki.secondlife.com/wiki/llListFindListNext) — scraped 2026-03-18_
+
+Returns the integer index of the nth instance of test in src.
+
+## Caveats
+
+- Strict type matching and case sensitivity is enforced.
+
+  - "1" != 1
+  - "1.0" != 1.0
+  - 1 != 1.0
+  - "a822ff2b-ff02-461d-b45d-dcd10a2de0c2" != (key)"a822ff2b-ff02-461d-b45d-dcd10a2de0c2"
+  - "Justice" != "justice"
+- If test is an empty list the value returned is 0 rather than -1.
+
+## Examples
+
+```lsl
+default
+{
+    touch_end(integer i)
+    {
+        list myList = [];
+        list toFind = [];
+        llSay(0, "both lists empty  (expect '0', early abort): " + (string)llListFindListNext(myList, toFind, 0));
+
+        myList = [1,2];
+        //Consistent with behavior of llListFindList
+        llSay(0, "toFind empty (expect immediate match at 0): " + (string)llListFindListNext(myList, toFind, 0));
+        llSay(0, "toFind empty (expect immediate match at 1): " + (string)llListFindListNext(myList, toFind, 1));        myList = [];
+        toFind = [1,2];
+        llSay(0, "myList empty, toFind populated (expect -1): " + (string)llListFindListNext(myList, toFind, 0));
+
+        //indices: 0   1   2   3   4   5   6   7   8   9   10   11  12   13
+        myList = ["A", 0, "B", 1, "C", 2, "A", 0, "A", 1, "A", "A", 0, <1,2,3>, "c"];
+        toFind = ["A", 0];
+        llSay(0, "llListFindListNext(myList, toFind, 0) (expect '0'): " + (string)llListFindListNext(myList, toFind, 0));
+        llSay(0, "llListFindListNext(myList, toFind, 1) (expect '6'): " + (string)llListFindListNext(myList, toFind, 1));
+        llSay(0, "llListFindListNext(myList, toFind, 2) (expect '11'): " + (string)llListFindListNext(myList, toFind, 2));
+        llSay(0, "llListFindListNext(myList, toFind, 3) (expect '-1'): " + (string)llListFindListNext(myList, toFind, 3));
+        llSay(0, "llListFindListNext(myList, toFind, -1) (expect '11'): " + (string)llListFindListNext(myList, toFind, -1));
+        llSay(0, "llListFindListNext(myList, toFind, -2) (expect '6'): " + (string)llListFindListNext(myList, toFind, -2));
+        llSay(0, "llListFindListNext(myList, toFind, -3) (expect '0'): " + (string)llListFindListNext(myList, toFind, -3));
+        llSay(0, "llListFindListNext(myList, toFind, -4) (expect '-1'): " + (string)llListFindListNext(myList, toFind, -4));        toFind = [3];
+        llSay(0, "3 not matched with vector<1,2,3> content (expect '-1'): " + (string)llListFindListNext(myList, toFind, 0));
+        toFind = [<1,2,3>];
+        llSay(0, "Find a vector:  (expect '13'): " + (string)llListFindListNext(myList, toFind, -1));
+        toFind =[<1,2,3>, "c"];
+        llSay(0, "Find a vector:  (expect '13'): " + (string)llListFindListNext(myList, toFind, -1));
+        toFind =[ "c"];
+        llSay(0, "Find last element in reverse  (expect '14'): " + (string)llListFindListNext(myList, toFind, -1));
+        llSay(0, "Find last element fwd  (expect '14'): " + (string)llListFindListNext(myList, toFind, 0));
+        llSay(0, "Find last element with llListFindList (expect '14'): " + (string)llListFindList(myList, toFind));    }
+}
+```
+
+## See Also
+
+### Functions
+
+- **llSubStringIndex** — Find a string in another string
+
+<!-- /wiki-source -->

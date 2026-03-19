@@ -1,0 +1,31 @@
+{
+  "patterns_last_run": "2026-03-18",
+  "last_updated": "2026-03-19",
+  "extension_sources": {
+    "jyaoma": "2026-03-18",
+    "kwdb": "2026-03-18",
+    "pyoptimizer": "2026-03-18",
+    "makopo": "2026-03-18",
+    "buildersbrewery": "2026-03-18"
+  },
+  "doc_counts": {
+    "functions": 520,
+    "events": 43,
+    "ossl": 275,
+    "examples": 354,
+    "patterns": 452,
+    "constants": 7,
+    "tutorials": 11,
+    "slua": 7
+  },
+  "sections": {
+    "ossl": true,
+    "slua": true
+  },
+  "extra_library_sources": {
+    "absolutelycraicrai": "2026-03-19",
+    "outworldz-github": "2026-03-19",
+    "outworldz-web": "2026-03-19",
+    "avacon-opensim": "2026-03-19"
+  }
+}

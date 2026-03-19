@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "jyaoma.lsl-lsp",
+    "MinuitFerina.lsl-tools",
+    "fixedbit.lslint",
+    "secondlife.sl-vscode-plugin"
+  ]
+}

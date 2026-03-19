@@ -1,0 +1,256 @@
+---
+name: "llTeleportAgentGlobalCoords"
+category: "function"
+type: "function"
+language: "LSL"
+description: 'Teleports an agent to region_coordinates within a region specified by global_coordinates.
+
+A region's global coordinates can be retrieved using llRequestSimulatorData('region name', DATA_SIM_POS)
+
+If the destination is in the current region, the avatar will land facing look_at as a position within t'
+signature: "void llTeleportAgentGlobalCoords(key agent, vector global_coordinates, vector region_coordinates, vector look_at)"
+return_type: "void"
+sleep_time: ""
+energy_cost: ""
+wiki_url: 'https://wiki.secondlife.com/wiki/llTeleportAgentGlobalCoords'
+deprecated: "false"
+first_fetched: "2026-03-10"
+last_updated: "2026-03-10"
+patterns: ["llteleportagentglobalcoords"]
+---
+
+Teleports an agent to region_coordinates within a region specified by global_coordinates.
+
+A region's global coordinates can be retrieved using llRequestSimulatorData("region name", DATA_SIM_POS)
+
+If the destination is in the current region, the avatar will land facing look_at as a position within that region. Otherwise, look_at is treated as a unit direction.
+
+To run this function the script must request the PERMISSION_TELEPORT permission with llRequestPermissions and it must be granted by agent.
+
+The combination of llRequestSimulatorData and llTeleportAgentGlobalCoords allows agents to be teleported to regions by region name.
+
+
+## Signature
+
+```lsl
+void llTeleportAgentGlobalCoords(key agent, vector global_coordinates, vector region_coordinates, vector look_at);
+```
+
+
+## Parameters
+
+
+| Type | Name | Description |
+|------|------|-------------|
+| `key` | `agent` | avatar UUID that is in the same region (the avatar to teleport, must be the owner) |
+| `vector` | `global_coordinates` | Global coordinates of the destination region. Can be retrieved by using llRequestSimulatorData(region_name, DATA_SIM_POS). |
+| `vector` | `region_coordinates` | position in region coordinates where the avatar should land. |
+| `vector (direction)` | `look_at` | direction the avatar should be facing on landing (east, west, etc). |
+
+
+## See Also
+
+- [SL Wiki](https://wiki.secondlife.com/wiki/llTeleportAgentGlobalCoords)
+
+
+<!-- wiki-source -->
+_Source: [SL Wiki](https://wiki.secondlife.com/wiki/llTeleportAgentGlobalCoords) — scraped 2026-03-18_
+
+Teleports an agent to region_coordinates within a region specified by global_coordinates.
+
+## Caveats
+
+| Permissions |
+| --- |
+| - Do not depend upon the auto-grant status of permissions. **Always** use the run_time_permissions event. - If the script lacks the permission PERMISSION_TELEPORT, the script will shout an error on DEBUG_CHANNEL and the operation fails (but the script continues to run). - If PERMISSION_TELEPORT is granted by anyone other than agent, then when the function is called an error will be shouted on DEBUG_CHANNEL. - Once the PERMISSION_TELEPORT permission is granted there is no way to revoke it except from inside the script (for example, with a new llRequestPermissions call) or the script is reset or deleted. |
+
+- **This function can only teleport the owner of the object** (unless part of an Experience).
+- Teleports are throttled
+- This function cannot be used in a script in an object attached using llAttachToAvatarTemp.
+- Sitting avatars cannot be teleported using this function. You must llUnSit them first.
+- This function does not override a parcel's teleport settings, i.e. if the parcel has a landing zone enabled the avatar will be teleported there.
+- If the script is part of an experience that the avatar has granted permission, then this function may teleport them without being the owner and it will override parcel teleport routing.
+- When look_at treated treated as a direction, a valid input should be .
+
+  - In other words, it should be a **unit vector** corresponding to the avatar turning **angle** radians from north.
+
+## Examples
+
+Basic example:
+
+```lsl
+default
+{
+    touch_start(integer num_detected)
+    {
+        llRequestPermissions(llGetOwner(), PERMISSION_TELEPORT);
+    }
+
+    run_time_permissions(integer perm)
+    {
+        if (PERMISSION_TELEPORT & perm)
+        {
+            vector global_coord = <232704, 291072, 0>;
+            vector region_pos = <122, 122, 40>;
+            llTeleportAgentGlobalCoords(llGetPermissionsKey(), global_coord, region_pos, ZERO_VECTOR);
+        }
+    }
+}
+```
+
+Similar to the above, but also keeps track of current global coordinate and adjusts the **look_at** value based on whether the destination is the current region or a different one. This ensures that the avatar will always be facing the same direction regardless of whether they're teleporting within the region or to another one.
+
+The script keeps track of the current region's global coordinate in **state_entry** and **changed** events, which is later used to check whether the destination has the same global coordinates.
+
+```lsl
+vector current_region;
+
+default
+{
+    state_entry()
+    {
+        // Get current global coordinate when the script starts.
+        llRequestSimulatorData(llGetRegionName(), DATA_SIM_POS);
+    }
+
+    changed(integer change)
+    {
+        if (!(change & CHANGED_REGION)) return;
+
+        // Get current region coordinate when entering a new region.
+        llRequestSimulatorData(llGetRegionName(), DATA_SIM_POS);
+    }
+
+    dataserver(key query, string data)
+    {
+        // Save llRequestSimulatorData response.
+        current_region = (vector)data;
+    }
+
+    touch_start(integer num_detected)
+    {
+        llRequestPermissions(llGetOwner(), PERMISSION_TELEPORT);
+    }
+
+    run_time_permissions(integer perm)
+    {
+        if (!(PERMISSION_TELEPORT & perm)) return;
+
+        vector global_coord = <232704, 291072, 0>;
+        vector region_pos = <122, 122, 40>;
+
+        float angle = 45 * DEG_TO_RAD;
+        vector look_at = ;
+
+        if (current_region == global_coord) {
+            // When teleporting within the current region, we should use a position within the region instead.
+            look_at = region_pos + look_at;
+        }
+
+        llTeleportAgentGlobalCoords(llGetPermissionsKey(), global_coord, region_pos, look_at);
+    }
+}
+```
+
+Older example:
+
+```lsl
+string simName = "Help Island Public";
+vector simGlobalCoords;
+
+vector landingPoint = <128.0, 128.0, 24.0>;
+
+key owner;
+
+default
+{
+    on_rez(integer start_param)
+    {
+        llResetScript();
+    }
+
+    changed(integer change)
+    {
+        if (change & CHANGED_OWNER)
+            llResetScript();
+    }
+
+    state_entry()
+    {
+        owner = llGetOwner();
+
+        llRequestPermissions(owner, PERMISSION_TELEPORT);
+        llRequestSimulatorData(simName, DATA_SIM_POS);
+    }
+
+    touch_start(integer total_number)
+    {
+        key id = llDetectedKey(0);
+
+        if (id == owner)
+        {
+            if (simGlobalCoords == ZERO_VECTOR)
+            {
+                llOwnerSay("Config error, tp request was denied. Please try again!");
+                llResetScript();
+            }
+            else
+            {
+                llOwnerSay("Teleporting you to: http://maps.secondlife.com/secondlife/"
+                    + llEscapeURL(simName) + "/" + (string)llRound(landingPoint.x)
+                    + "/" + (string)llRound(landingPoint.y) + "/" + (string)llRound(landingPoint.z) + "/");
+
+                llTeleportAgentGlobalCoords(owner, simGlobalCoords, landingPoint, ZERO_VECTOR);
+            }
+        }
+        else
+        {
+            // llRegionSayTo is faster than llInstantMessage and we can assume
+            // that the touching avatar is within the same sim
+
+            llRegionSayTo(id, PUBLIC_CHANNEL,
+                "Sorry, I can't tp you. You're NOT my owner!");
+        }
+    }
+
+    run_time_permissions(integer perm)
+    {
+        // if permission request has been denied (read ! as not)
+        if (!(perm & PERMISSION_TELEPORT))
+        {
+            llOwnerSay("I need permissions to teleport you!");
+            llRequestPermissions(owner, PERMISSION_TELEPORT);
+        }
+    }
+
+//  dataserver event only called if data is returned
+//  or in other words, if you request data for a sim that does
+//  not exist this event will NOT be called
+
+    dataserver(key query_id, string data)
+    {
+        simGlobalCoords = (vector)data;
+        // llOwnerSay("Sim global coords: " + (string)simGlobalCoords);
+    }
+}
+```
+
+## See Also
+
+### Events
+
+- **run_time_permissions** — Permission receiving event
+
+### Functions
+
+- **llGetPermissions** — Get the permissions granted
+- **llGetPermissionsKey** — Get the agent who granted permissions
+- **llRequestPermissions** — Request permissions
+- **llRequestSimulatorData** — Useful for requesting simulator position
+- **llTeleportAgent** — Teleporting agents to a landmark or position in the region.
+
+### Articles
+
+- Script permissions
+
+<!-- /wiki-source -->

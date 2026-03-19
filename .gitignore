@@ -1,0 +1,37 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Build and packaged artifacts
+build/
+dist/
+dist/SLCode-app/
+
+# Local runtime logs
+search-cache.log
+
+# Local tool settings
+.claude/settings.local.json
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Internal / generated files not for public repo
+CLAUDE_HANDOVER.md
+Gemini_Generated_Image_oc1356oc1356oc13.png
+lslint.exe
+
+# Generated local cache imports (optional when a big auto-sync is used)
+LSL Cache/lsl-docs/examples/*
+
+# Local build staging and transient outputs
+.build-staging/
+build-last.log
+
+# Custom editor/runtime state
+.claude/
+.vscode/

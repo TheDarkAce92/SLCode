@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 270.93334 270.93333"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="slcode-cli icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="1"
+     inkscape:cx="478.5"
+     inkscape:cy="493.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g77"
+     showguides="true"
+     inkscape:lockguides="false" />
+  <defs
+     id="defs1">
+    <rect
+       x="185.94723"
+       y="315.83684"
+       width="715.07649"
+       height="314.46958"
+       id="rect20" />
+    <linearGradient
+       id="linearGradient18"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#292f3d;stop-opacity:1;"
+         offset="0.30015799"
+         id="stop19" />
+      <stop
+         style="stop-color:#14171f;stop-opacity:1;"
+         offset="1"
+         id="stop20" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient18"
+       id="radialGradient20"
+       cx="136.38124"
+       cy="135.65773"
+       fx="136.38124"
+       fy="135.65773"
+       r="124.0816"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.91457227,-0.19106344)" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter78"
+       x="-0.23530679"
+       y="-0.2232689"
+       width="1.4706136"
+       height="1.4465378">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2300519"
+         id="feGaussianBlur78" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter79"
+       x="-0.1213404"
+       y="-0.21269098"
+       width="1.2426808"
+       height="1.425382">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.9326266"
+         id="feGaussianBlur79" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter80"
+       x="-0.096456556"
+       y="-0.091522002"
+       width="1.1929131"
+       height="1.183044">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.26551975"
+         id="feGaussianBlur80" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter81"
+       x="-0.039983052"
+       y="-0.070084115"
+       width="1.0799661"
+       height="1.1401682">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.26551976"
+         id="feGaussianBlur81" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter83"
+       x="-0.058606441"
+       y="-0.069637445"
+       width="1.1172129"
+       height="1.1392749">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.21542226"
+         id="feGaussianBlur83" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter87"
+       x="-0.10481576"
+       y="-1.5335543"
+       width="1.2096315"
+       height="4.0671087">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.5244967"
+         id="feGaussianBlur87" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter88"
+       x="-0.049837418"
+       y="-0.7291689"
+       width="1.0996748"
+       height="2.4583378">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.26732288"
+         id="feGaussianBlur88" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter83-8"
+       x="-0.014455602"
+       y="-0.078910979"
+       width="1.0289112"
+       height="1.157822">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.29142637"
+         id="feGaussianBlur83-7" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter92"
+       x="-0.022599426"
+       y="-0.094548934"
+       width="1.0382923"
+       height="1.1581664">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.26790103"
+         id="feGaussianBlur92" />
+    </filter>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 2">
+    <path
+       d="M 259.54023,39.231197 H 11.384835 V 249.43645 c 0,5.60194 4.510104,10.11205 10.112044,10.11205 H 249.43645 c 5.60194,0 10.11205,-4.51011 10.11205,-10.11205 z"
+       style="display:inline;fill:url(#radialGradient20);stroke-width:0.264583"
+       id="path89"
+       sodipodi:nodetypes="ccssssc" />
+    <path
+       d="m 21.489128,11.377083 c -5.601941,0 -10.112045,4.510104 -10.112045,10.112045 V 39.231197 H 259.54023 V 21.489128 c 0,-5.601941 -4.50959,-10.112045 -10.11153,-10.112045 z"
+       style="display:inline;fill:#0197cb;fill-opacity:1;stroke-width:0.264583"
+       id="path82" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.5379px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;mix-blend-mode:normal;fill:#292f3d;fill-opacity:1;stroke:#292f3d;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter83)"
+       x="247.36836"
+       y="31.198191"
+       id="text83"
+       transform="scale(0.92685123,1.0789218)"><tspan
+         sodipodi:role="line"
+         id="tspan83"
+         style="fill:#292f3d;fill-opacity:1;stroke:#292f3d;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="247.36836"
+         y="31.198191">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.5379px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#292f3d;fill-opacity:1;stroke:#292f3d;stroke-width:2.02922;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter83-8)"
+       x="247.36836"
+       y="31.198191"
+       id="text83-7"
+       transform="matrix(0.76018538,0,0,0.71879316,-166.928,10.989628)"><tspan
+         sodipodi:role="line"
+         id="tspan91"
+         x="247.36836"
+         y="31.198191">SLCode</tspan></text>
+  </g>
+  <g
+     inkscape:label="Layer 1 copy"
+     inkscape:groupmode="layer"
+     id="g77">
+    <g
+       id="g91"
+       transform="translate(0,0.20395906)">
+      <g
+         id="g89">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:86.4128px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;mix-blend-mode:normal;fill:#58d4fe;fill-opacity:1;stroke:#25c7fe;stroke-width:8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter79)"
+           x="92.154335"
+           y="150.72963"
+           id="text3"
+           transform="matrix(0.93139416,0,0,1.0736593,0,16.404171)"><tspan
+             sodipodi:role="line"
+             id="tspan3"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:86.4128px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#58d4fe;fill-opacity:1;stroke-width:8;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+             x="92.154335"
+             y="150.72963">SL</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:121.762px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:331.14;display:inline;fill:#58d4fe;fill-opacity:1;stroke:#25c7fe;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter87)"
+           x="41.991035"
+           y="130.2753"
+           id="text87"
+           transform="matrix(0.72007243,0,0,1.3887492,161.78777,-31.220847)"><tspan
+             x="41.991035"
+             y="130.2753"
+             id="tspan1">_</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:121.762px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;mix-blend-mode:normal;fill:#58d4fe;fill-opacity:1;stroke:#25c7fe;stroke-width:12;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter78)"
+           x="41.991035"
+           y="130.2753"
+           id="text86"
+           transform="matrix(0.7344288,0,0,1.3868981,-1.226629,16.57963)"><tspan
+             sodipodi:role="line"
+             id="tspan85"
+             x="41.991035"
+             y="130.2753">&gt;</tspan></text>
+      </g>
+      <g
+         id="g90"
+         style="filter:url(#filter92)">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:121.762px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:331.14;display:inline;mix-blend-mode:normal;fill:#25c7fe;fill-opacity:1;stroke:#25c7fe;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter80)"
+           x="41.991035"
+           y="130.2753"
+           id="text76"
+           transform="matrix(0.72007243,0,0,1.3887492,0,16.404171)"><tspan
+             x="41.991035"
+             y="130.2753"
+             id="tspan2">&gt;</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:86.4128px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;mix-blend-mode:normal;fill:#25c7fe;fill-opacity:1;stroke:#25c7fe;stroke-width:6;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter81)"
+           x="92.154335"
+           y="150.72963"
+           id="text77"
+           transform="matrix(0.93139416,0,0,1.0736593,0,16.404171)"><tspan
+             sodipodi:role="line"
+             id="tspan77"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:86.4128px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:6;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+             x="92.154335"
+             y="150.72963">SL</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:121.762px;font-family:Monospace;-inkscape-font-specification:'Monospace, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:331.14;display:inline;mix-blend-mode:normal;fill:#25c7fe;fill-opacity:1;stroke:#25c7fe;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter88)"
+           x="41.991035"
+           y="130.2753"
+           id="text85"
+           transform="matrix(0.67777957,0,0,1.4140113,165.10881,-35.291378)"><tspan
+             x="41.991035"
+             y="130.2753"
+             id="tspan4">_</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

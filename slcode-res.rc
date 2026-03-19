@@ -1,0 +1,2 @@
+/* slcode-res.rc — Windows resource file for SLCode stubs */
+1 ICON "slcode-cli.ico"

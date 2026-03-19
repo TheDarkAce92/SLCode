@@ -1,0 +1,14 @@
+{
+  "name": "LSL Queries",
+  "version": "0.1.0.0",
+  "language": "LSL",
+  "slua_enabled": false,
+  "firestorm_preprocessor": false,
+  "target_region_type": "mainland",
+  "ossl_enabled": false,
+  "vs_code_snippets": true,
+  "cache_path": "~/.lsl-cache",
+  "cache_version": "",
+  "created": "2026-03-09",
+  "last_session": "2026-03-16"
+}

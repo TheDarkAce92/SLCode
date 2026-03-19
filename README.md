@@ -1,4 +1,4 @@
-![SLCode Logo](assets/slcode-cli.png)
+![SLCode Logo](slcode-cli.png)
 # SLCode
 
 LSL documentation browser, code assistant, and IDE for Second Life / OpenSimulator scripting.

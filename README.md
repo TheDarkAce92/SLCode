@@ -115,5 +115,4 @@ Delete `%LOCALAPPDATA%\SLCode\SLCode-app\version.txt` to force re-extraction man
 | [docs/CLI_REFERENCE.md](docs/CLI_REFERENCE.md) | Full CLI command reference |
 | [docs/NAVIGATION.md](docs/NAVIGATION.md) | Where to make specific types of changes |
 | [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) | Known issues and fixes |
-| [CLAUDE.md](CLAUDE.md) | AI/maintainer guide for this repo |
 | [dist/README.md](dist/README.md) | End-user documentation (shipped with the app) |

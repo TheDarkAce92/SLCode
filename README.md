@@ -1,4 +1,5 @@
-<img src="slcode-cli.png" alt="SLCode CLI Screenshot" width="500"/>
+<center><img src="slcode-cli.png" alt="SLCode CLI Screenshot" width="500"/></center>
+
 # SLCode
 
 LSL documentation browser, code assistant, and IDE for Second Life / OpenSimulator scripting.

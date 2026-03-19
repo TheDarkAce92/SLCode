@@ -1,4 +1,4 @@
-<img src="slcode-cli.png" alt="SLCode CLI Screenshot" width="500"/>
+<div align="center"><img src="slcode-cli.png" alt="SLCode CLI Screenshot" width="500"/></div>
 
 # SLCode
 
